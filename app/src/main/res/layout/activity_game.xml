@@ -4,51 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="#4D4C4C"
     tools:context=".GameActivity">
-
-    <TextView
-        android:layout_width="35dp"
-        android:layout_height="20dp"
-        android:text="Hola!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27">
-
-    </TextView>
 
     <Button
         android:id="@+id/attackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:background="#CA7207"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="116dp"
+        android:background="@mipmap/redButton"
+        android:foreground="@mipmap/sword_02c"
+        android:onClick="attackPress"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="408dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="573dp" />
 
     <Button
         android:id="@+id/healButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#2B5415"
+        android:layout_width="65dp"
+        android:layout_height="52dp"
+        android:background="@mipmap/greenButton"
+        android:foreground="@mipmap/potion_02a"
+        android:onClick="healPress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="408dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="638dp" />
 
     <Button
         android:id="@+id/retreatButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:background="#2F2F2F"
+        android:layout_width="65dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="104dp"
+        android:background="@mipmap/blueButton"
+        android:foreground="@mipmap/skull_01a"
+        android:onClick="retreatPress"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="408dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="309dp"
+        android:layout_height="285dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/oldPaper" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
