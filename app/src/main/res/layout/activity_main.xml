@@ -22,7 +22,7 @@
         android:id="@+id/startButton"
         android:layout_width="161dp"
         android:layout_height="42dp"
-        android:background="@mipmap/orangeButton"
+        android:background="@mipmap/orange_button"
         android:foregroundTint="@android:color/background_light"
         android:text="Press Start"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -30,6 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

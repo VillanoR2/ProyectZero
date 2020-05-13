@@ -12,47 +12,130 @@
         android:id="@+id/attackButton"
         android:layout_width="58dp"
         android:layout_height="57dp"
-        android:layout_marginStart="116dp"
-        android:background="@mipmap/redButton"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="104dp"
+        android:background="@mipmap/red_button"
         android:foreground="@mipmap/sword_02c"
         android:onClick="attackPress"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="573dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/healButton"
-        android:layout_width="65dp"
-        android:layout_height="52dp"
-        android:background="@mipmap/greenButton"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="104dp"
+        android:background="@mipmap/green_button"
         android:foreground="@mipmap/potion_02a"
         android:onClick="healPress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="638dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/retreatButton"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toEndOf="@+id/attackButton"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/retreatButton"
         android:layout_width="65dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="104dp"
-        android:background="@mipmap/blueButton"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="108dp"
+        android:background="@mipmap/blue_button"
         android:foreground="@mipmap/skull_01a"
         android:onClick="retreatPress"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="570dp" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/attackButton"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="309dp"
-        android:layout_height="285dp"
+        android:layout_width="341dp"
+        android:layout_height="284dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/oldPaper" />
+        app:srcCompat="@mipmap/old_paper" />
+
+    <TextView
+        android:id="@+id/textGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/gameplay"
+        android:fontFamily="monospace"
+        android:foregroundTint="#FFFFFF"
+        android:text="@string/gameplay"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textLive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="monospace"
+        android:foregroundTint="#FFFFFF"
+        android:text="@string/live"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/textDamageToMonster"
+        app:layout_constraintEnd_toStartOf="@+id/textMonsterLive"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textMonsterLive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="monospace"
+        android:foregroundTint="#FFFFFF"
+        android:text="@string/monster_live"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/textMonsterDamage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textMonsterDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="500dp"
+        android:fontFamily="monospace"
+        android:foregroundTint="#FFFFFF"
+        android:text="@string/monster_damage"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textDamageToMonster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:fontFamily="monospace"
+        android:foregroundTint="#FFFFFF"
+        android:text="@string/damage"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textMonsterDamage"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

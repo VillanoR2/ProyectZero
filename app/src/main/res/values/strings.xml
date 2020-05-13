@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ProyectZero</string>
+    <string name="gameplay">Inicio El Juego...</string>
+    <string name="live">200</string>
+    <string name="monster_live">0</string>
+    <string name="monster_damage">0</string>
+    <string name="damage">0</string>
+    <string name="healt">0</string>
+    <string name="score">0</string>
 </resources>
