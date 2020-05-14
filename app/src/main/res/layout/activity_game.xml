@@ -1,104 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="#4D4C4C"
+    android:orientation="vertical"
+    android:padding="30dp"
     tools:context=".GameActivity">
 
-    <Button
-        android:id="@+id/attackButton"
-        android:layout_width="58dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginBottom="104dp"
-        android:background="@mipmap/red_button"
-        android:foreground="@mipmap/sword_02c"
-        android:onClick="attackPress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/healButton"
-        android:layout_width="69dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="104dp"
-        android:background="@mipmap/green_button"
-        android:foreground="@mipmap/potion_02a"
-        android:onClick="healPress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/retreatButton"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toEndOf="@+id/attackButton"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/retreatButton"
-        android:layout_width="65dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="108dp"
-        android:background="@mipmap/blue_button"
-        android:foreground="@mipmap/skull_01a"
-        android:onClick="retreatPress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/attackButton"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="341dp"
-        android:layout_height="284dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/old_paper" />
-
     <TextView
-        android:id="@+id/textGame"
-        android:layout_width="wrap_content"
+        android:id="@+id/namePlayer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/gameplay"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
         android:fontFamily="monospace"
         android:foregroundTint="#FFFFFF"
-        android:text="@string/gameplay"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        android:text="@string/name_user"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:id="@+id/textLive"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
         android:fontFamily="monospace"
         android:foregroundTint="#FFFFFF"
         android:text="@string/live"
         android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/textDamageToMonster"
-        app:layout_constraintEnd_toStartOf="@+id/textMonsterLive"
-        app:layout_constraintHorizontal_bias="0.012"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textDamageToMonster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        android:fontFamily="monospace"
+        android:foregroundTint="#FFFFFF"
+        android:text="@string/damage"
+        android:textColor="@android:color/background_light"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textMonsterDamage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp"
+        android:fontFamily="monospace"
+        android:foregroundTint="#FFFFFF"
+        android:text="@string/monster_damage"
+        android:textColor="@android:color/background_light"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textMonsterLive"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
         android:fontFamily="monospace"
         android:foregroundTint="#FFFFFF"
         android:text="@string/monster_live"
@@ -106,36 +74,66 @@
         app:layout_constraintBottom_toTopOf="@+id/textMonsterDamage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textMonsterDamage"
-        android:layout_width="wrap_content"
+        android:id="@+id/textGame"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="500dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="105dp"
+        android:contentDescription="@string/gameplay"
         android:fontFamily="monospace"
         android:foregroundTint="#FFFFFF"
-        android:text="@string/monster_damage"
+        android:text="@string/gameplay"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textDamageToMonster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="500dp"
-        android:fontFamily="monospace"
-        android:foregroundTint="#FFFFFF"
-        android:text="@string/damage"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textMonsterDamage"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="parent"
+    <Button
+        android:id="@+id/healButton"
+        android:layout_width="72dp"
+        android:layout_height="67dp"
+        android:layout_below="@+id/attackButton"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="179dp"
+        android:layout_marginTop="-79dp"
+        android:background="@mipmap/green_button"
+        android:foreground="@mipmap/potion_02a"
+        android:onClick="healPress"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/attackButton"
+        android:layout_width="72dp"
+        android:layout_height="67dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="366dp"
+        android:background="@mipmap/red_button"
+        android:foreground="@mipmap/sword_02c"
+        android:onClick="attackPress"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/retreatButton"
+        android:layout_width="72dp"
+        android:layout_height="67dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="136dp"
+        android:layout_toEndOf="@+id/attackButton"
+        android:background="@mipmap/blue_button"
+        android:foreground="@mipmap/skull_01a"
+        android:onClick="retreatPress"
         tools:ignore="MissingConstraints" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

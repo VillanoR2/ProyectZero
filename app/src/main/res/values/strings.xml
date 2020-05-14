@@ -7,4 +7,7 @@
     <string name="damage">0</string>
     <string name="healt">0</string>
     <string name="score">0</string>
+    <string name="name_user">Nombre Usuario</string>
+    <string name="informacion">Ingrese su nombre</string>
+    <string name="save_button">Guardar</string>
 </resources>

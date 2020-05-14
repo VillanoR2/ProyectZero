@@ -1,36 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="#87550B"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="casual"
         android:text="RPG"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075" />
+        android:textColor="@android:color/holo_green_dark" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:text="@string/informacion"
+        android:textColor="@android:color/background_light"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/nameButton"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/blue_button"
+        android:onClick="savePressed"
+        android:text="@string/save_button" />
+
+    <TextView
+        android:id="@+id/nameUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textAlignment="center"
+        android:text="@string/name_user"
+        android:textColor="#FAF5F5"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="161dp"
-        android:layout_height="42dp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
         android:background="@mipmap/orange_button"
         android:foregroundTint="@android:color/background_light"
         android:text="Press Start"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685"
         tools:ignore="MissingConstraints" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
